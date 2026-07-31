@@ -31,6 +31,11 @@ app.use("/api/applications", applicationRoutes);
 app.use("/api/policies", policyRoutes);
 app.use("/api/notifications", notificationRoutes);
 
+// Root API endpoint
+app.get("/", (req, res) => {
+  return res.send("Student Leave Management Dashboard API is running. Access the API routes via /api or check health status via /health.");
+});
+
 // Server status endpoint
 app.get("/health", (req, res) => {
   return res.json({

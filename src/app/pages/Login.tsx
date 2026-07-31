@@ -4,19 +4,19 @@ import { useApp, UserRole } from "../context/AppContext";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { Label } from "../components/ui/label";
-import { 
-  GraduationCap, 
-  Lock, 
-  UserCheck, 
-  Shield, 
-  Sparkles, 
-  CheckCircle2, 
-  User, 
-  KeyRound, 
-  ArrowRight, 
-  UserCog, 
-  ArrowLeft, 
-  Mail 
+import {
+  GraduationCap,
+  Lock,
+  UserCheck,
+  Shield,
+  Sparkles,
+  CheckCircle2,
+  User,
+  KeyRound,
+  ArrowRight,
+  UserCog,
+  ArrowLeft,
+  Mail
 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -165,7 +165,7 @@ export function Login() {
     <div className="min-h-screen relative bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-slate-100 flex items-center justify-center font-sans overflow-hidden p-4 sm:p-6">
       {/* Subtle decorative grid background */}
       <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.03)_1px,transparent_1px)] [background-size:24px_24px]" />
-      
+
       {/* Glowing background blurs */}
       <div className="absolute top-1/4 -left-20 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
@@ -207,11 +207,10 @@ export function Login() {
                       key={role}
                       type="button"
                       onClick={() => handleRoleSelect(role)}
-                      className={`flex items-center justify-center gap-1.5 py-2 px-1 rounded-xl text-[11px] font-bold capitalize transition-all ${
-                        isSelected
-                          ? "bg-indigo-600 text-white shadow-md shadow-indigo-600/20"
-                          : "text-slate-400 hover:text-slate-200 hover:bg-slate-800/50"
-                      }`}
+                      className={`flex items-center justify-center gap-1.5 py-2 px-1 rounded-xl text-[11px] font-bold capitalize transition-all ${isSelected
+                        ? "bg-indigo-600 text-white shadow-md shadow-indigo-600/20"
+                        : "text-slate-400 hover:text-slate-200 hover:bg-slate-800/50"
+                        }`}
                     >
                       {getRoleIcon(role)}
                       <span>{role}</span>
@@ -246,7 +245,7 @@ export function Login() {
                   <Label htmlFor="password" className="text-xs font-bold text-slate-300">
                     Password
                   </Label>
-                  <span 
+                  <span
                     onClick={() => {
                       setMode("forgot");
                       if (selectedRole === "student") {
@@ -283,17 +282,7 @@ export function Login() {
               </Button>
             </form>
 
-            {/* Credentials Quick Access Banner */}
-            <div className="p-4 rounded-xl bg-slate-950/50 border border-slate-800/80 space-y-1.5">
-              <div className="flex items-center gap-2 text-indigo-400 font-bold text-xs">
-                <Lock className="w-3.5 h-3.5 text-indigo-400" /> Quick Access Credentials
-              </div>
-              <p className="text-[11px] text-slate-400 leading-relaxed">
-                Click any role tab above to pre-fill test credentials.
-                <br />
-                <span className="text-slate-500 font-mono text-[10px] mt-1 block">Student: 20CS001 • Mentor: mentor@college.edu • HOD: hod@college.edu • Admin: admin@college.edu</span>
-              </p>
-            </div>
+
           </>
         ) : (
           <>
@@ -319,11 +308,10 @@ export function Login() {
                       key={role}
                       type="button"
                       onClick={() => setSelectedRole(role)}
-                      className={`flex items-center justify-center gap-1.5 py-2 px-1 rounded-xl text-[11px] font-bold capitalize transition-all ${
-                        isSelected
-                          ? "bg-indigo-600 text-white shadow-md shadow-indigo-600/20"
-                          : "text-slate-400 hover:text-slate-200 hover:bg-slate-800/50"
-                      }`}
+                      className={`flex items-center justify-center gap-1.5 py-2 px-1 rounded-xl text-[11px] font-bold capitalize transition-all ${isSelected
+                        ? "bg-indigo-600 text-white shadow-md shadow-indigo-600/20"
+                        : "text-slate-400 hover:text-slate-200 hover:bg-slate-800/50"
+                        }`}
                     >
                       {getRoleIcon(role)}
                       <span>{role}</span>

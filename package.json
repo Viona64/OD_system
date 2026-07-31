@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
+    "vercel-build": "chmod +x ./node_modules/.bin/* && vite build",
     "dev": "vite"
   },
   "dependencies": {
